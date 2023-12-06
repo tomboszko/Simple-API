@@ -11,7 +11,7 @@ class PostController {
         $this->postModel = new Post;
     }
 
-    public function getAllPosts() {
+    public function getPosts() {
         $posts = $this->postModel->getPosts();
         return $posts;
     }
