@@ -1,20 +1,13 @@
-
-
 <?php
-
-
-// index.php
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Include the Composer autoloader
-require_once __DIR__ . '/vendor/autoload.php';
-// Include the view file
-include 'view.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 // Include the PostController class
-include 'PostController.php';
+include __DIR__ . '/../controllers/PostController.php';
 
 // Create a new instance of the router
 $router = new \Bramus\Router\Router();
@@ -26,15 +19,12 @@ $router = new \Bramus\Router\Router();
 $router->set404(function() {
     header('HTTP/1.1 404 Not Found');
     // ... return some 404 page or JSON response
-    
 });
 
 // Error handling logic
 set_exception_handler(function($e) {
     // Handle exceptions, log errors, etc.
 });
-
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 
 // ... after instantiating the router
 
@@ -58,6 +48,3 @@ $router->get('/post/(\d+)', function($id) {
 });
 
 // ... define other routes for POST, PUT, DELETE, etc.
-
-
-

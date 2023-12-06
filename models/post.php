@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'database.php';
+require_once __DIR__ . '/../config/database.php';
 
 class Post {
     private $db;
@@ -22,6 +22,7 @@ class Post {
                           ");
 
         $results = $this->db->resultSet();
+        var_dump($results); 
 
         return $results;
 

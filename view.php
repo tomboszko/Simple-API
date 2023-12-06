@@ -7,9 +7,9 @@
 
   <p>Here is the data we received from the controller:</p>
 
-  <h1><?php echo $post['title']; ?></h1>
-  <p><?php echo $post['body']; ?></p>
-  <p>Author: <?php echo $post['author']; ?></p>
+  <h1><?php echo $posts['title']; ?></h1>
+  <p><?php echo $posts['body']; ?></p>
+  <p>Author: <?php echo $posts['author']; ?></p>
 
 </body>
 </html>
