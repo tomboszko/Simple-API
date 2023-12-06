@@ -28,8 +28,11 @@ class Post {
     }
 
     public function getPostById($id) {
-        // ... fetch the post from the database and return it
-    }
+        // Fetch the post data from the database using the ID
+        // This is just a placeholder - replace it with your actual database query
+        $post = $this->db->query("SELECT * FROM posts WHERE id = ?", [$id]);
 
+        return $post;
+    }
     
 }
