@@ -1,10 +1,12 @@
 <?php 
 
+require_once 'database.php';
+
 class Post {
     private $db;
 
     public function __construct() {
-        $this->db = new Database;
+        $this->db = new database;
     }
 
     public function getPosts() {
@@ -22,5 +24,12 @@ class Post {
         $results = $this->db->resultSet();
 
         return $results;
+
     }
+
+    public function getPostById($id) {
+        // ... fetch the post from the database and return it
+    }
+
+    
 }

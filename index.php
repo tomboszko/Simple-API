@@ -1,12 +1,18 @@
+
+
+
 <?php
+
+
 // index.php
 
-// Enable error reporting for development
-// error_reporting(E_ALL);
-// ini_set("display_errors", 1);
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 // Include the Composer autoloader
 require_once __DIR__ . '/vendor/autoload.php';
+// Include the view file
+include 'view.php';
 
 // Create a new instance of the router
 $router = new \Bramus\Router\Router();

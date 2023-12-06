@@ -13,4 +13,11 @@ class PostController {
         $posts = $this->postModel->getPosts();
         return $posts;
     }
+
+    public function getPostById($id) {
+        $post = $this->postModel->getPostById($id);
+        // ... return or display the post
+    }
+
+    
 }
